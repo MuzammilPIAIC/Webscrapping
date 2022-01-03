@@ -5,9 +5,13 @@ driver = webdriver.Chrome("chromedriver.exe")
 driver.implicitly_wait(5)
 driver.get("https://www.airliftexpress.com/search/daal")
 
+# resource https://www.geeksforgeeks.org/extract-all-the-urls-from-the-webpage-using-python/
+# https://stackoverflow.com/questions/64474877/unable-to-scrape-products-price-from-amazon
+
 
 #url = 'https://www.airliftexpress.com/search/daal'
 #reqs = requests.get(url)
+#soup = BeautifulSoup(reqs.content, 'html.parser')
 soup = BeautifulSoup(driver.page_source, 'html.parser')
  
 # urls = []
